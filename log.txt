@@ -1,0 +1,3 @@
+Application started
+Error (42): An error occurred
+Application ended
