@@ -33,6 +33,7 @@
                 "${workspaceFolder}\\src\\main.cpp",
                 "${workspaceFolder}\\src\\animals.cpp",
                 "${workspaceFolder}\\src\\grandFather.cpp",
+                "${workspaceFolder}\\src\\father.cpp",
                 "-o",
                 "${workspaceFolder}\\build\\testBuilt.exe"
             ],
