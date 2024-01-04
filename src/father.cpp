@@ -2,9 +2,14 @@
 #include<iostream>
 #include<string>
 
-void Father::sayHello(std::string)
+std::string Father::sayHello(std::string words)
 {
-    std::cout << " here is say hello from Fathers" << std::endl;
+    return (std::string("Father ")+words);
+}
+
+std::string Father::sayHelloA(std::string words)
+{
+    return (std::string("Father here: ")+ words);
 }
 
 Father::Father(std::string fatherName):grandFather(fatherName)

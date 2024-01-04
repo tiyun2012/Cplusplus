@@ -7,7 +7,9 @@ class Father : public grandFather
 {
     public:
     //overide GrandFather 
-    void sayHello(std::string);  
+    // compare virtual and None virtual Functions
+    virtual std::string sayHello(std::string);
+    std::string  sayHelloA(std::string);   
     Father(std::string);
     ~Father();
 };

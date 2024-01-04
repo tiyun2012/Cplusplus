@@ -1,22 +1,8 @@
-#include "my_class.h"
-#include <cstdio>
-// #include <cstdarg>
+#include "debug.h"
+#include <cstdio>// this file includes File
+#include <cstdarg>
 
-#include<iostream>
-using namespace std;
-static void private_helper_function()
-{
-    cout << "i am private(static) helper function, you need define me in cpp file not in h file" 
-            << "because stactic function  can't be called in other file" << endl;
-}
-
-void global_helper_function()
-{
-    cout << "global helper function" << endl;
-}
-
-
-void log_to_file(const char* format, ...) {
+void logs_to_file(const char* format, ...) {
     FILE* log_file = fopen("log.txt", "a"); // Open the log file in append mode
     if (log_file == nullptr) {
         // If the log file could not be opened, print an error message and return

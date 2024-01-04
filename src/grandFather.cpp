@@ -10,14 +10,15 @@ int grandFather::member_count=0;
 
 //variables:
 // function:
-void grandFather::sayHello(std::string)
-{
-    std::cout << " here is say hello from grandFathers" << std::endl;
-}
+// none-virtual functions
 
 std::string grandFather::getFullName()
 {
     return fullName;
+}
+int grandFather::getMemberCount()
+{
+    return member_count;
 }
 std::string grandFather::getName()
 {
@@ -29,22 +30,22 @@ std::string grandFather::getLastName()
 {
     return std::string();
 }
+// compare virtual and NoneVirtual functions
+std::string grandFather::sayHello(std::string words)
+{
+    return (std::string("grandFather")+words);
+}
 
-// -----constructiop function--------------
+std::string grandFather::sayHelloA(std::string words)
+{
+    return (std::string("grandFather: ")+ words);
+}
 
-
-
-// grandFather::grandFather(std::string fisrt_name)
-// {
-//     std::cout << "--->initialized grandfather" << std::endl;
-//     ++member_count;
-//     std::string fullName_ = fisrt_name+LastName;
-//     const std::string& fullName=fullName_;
-//     const std::string& firstname=fisrt_name;
-
-    
-// }
-grandFather::grandFather(std::string first_name) : firstname(first_name), fullName(first_name + LastName) {
+// -----constructiop function-------------
+grandFather::grandFather(std::string first_name) : 
+firstname(first_name), 
+fullName(first_name +std::string(" ")+LastName) 
+{
     std::cout << "--->initialized grandfather" << std::endl;
     ++member_count;
 }
