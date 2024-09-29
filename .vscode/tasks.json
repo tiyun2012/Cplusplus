@@ -1,7 +1,7 @@
 {
     "tasks": [
         {
-            "label": "Build All",
+            "label": "BuildAll",
             "type": "shell",
             "command": "echo",
             "args": ["Building All Tasks"],
@@ -26,11 +26,14 @@
         {
             "label": "Cplusplus demo taskB",
             "type": "shell",
-            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "command": "C:/msys64/mingw64/bin/g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${workspaceFolder}\\src\\main.cpp",
+                // "${workspaceFolder}\\src\\main.cpp",
+                // "${workspaceFolder}\\src\\interface.cpp",
+                // "${workspaceFolder}\\src\\interfaceOntop.cpp",
+                "${workspaceFolder}\\src\\evenDispatcher.cpp",
                 "${workspaceFolder}\\src\\animals.cpp",
                 "${workspaceFolder}\\src\\grandFather.cpp",
                 "${workspaceFolder}\\src\\father.cpp",
@@ -40,7 +43,10 @@
             "options": {
                 "cwd": "${workspaceFolder}"
             },
-            "problemMatcher": [],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            
             "group": {
                 "kind": "build",
                 "isDefault": false

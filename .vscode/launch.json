@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": 
+    [
+        {
+            "name": "Debug Learning C++",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/testBuilt.exe",
+            "stopAtEntry": false,
+            "environment": [],
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "MIMode": "gdb",
+            "setupCommands": 
+            [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "BuildAll",
+            "miDebuggerPath": "C:/msys64/mingw64/bin/gdb.exe",  // e.g., C:/MinGW/bin/gdb.exe
+            "logging": {
+                "engineLogging": true
+            },
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+    ]
+}
